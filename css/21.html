@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <style>
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
 <body>
 
-<h1 style="background-color:rgba(255, 91, 71, 0);">rgba(255, 99, 71, 0)</h1>
-<h1 style="background-color:rgba(255, 91, 71, 0.2);">rgba(255, 99, 71, 0.2)</h1>
-<h1 style="background-color:rgba(255, 91, 71, 0.4);">rgba(255, 99, 71, 0.4)</h1>
-<h1 style="background-color:rgba(255, 91, 71, 0.6);">rgba(255, 99, 71, 0.6)</h1>
-<h1 style="background-color:rgba(255, 91, 71, 0.8);">rgba(255, 99, 71, 0.8)</h1>
-<h1 style="background-color:rgba(255, 91, 71, 1);">rgba(255, 99, 71, 1)</h1>
+<h2>Rounded Active and Hover Buttons</h2>
 
-<p>You can make transparent colors by using the RGBA color value.</p>
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a class="active" href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+</div>
 
 </body>
 </html>

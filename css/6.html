@@ -2,21 +2,36 @@
 <html lang="en">
 <head>
     <style>
-        p.center {
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
             text-align: center;
-            color: red;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
         }
-        p.large {
-            font-size: 300%;
-        }
+
+        .button1 {font-size: 10px;}
+        .button2 {font-size: 12px;}
+        .button3 {font-size: 16px;}
+        .button4 {font-size: 20px;}
+        .button5 {font-size: 24px;}
     </style>
 </head>
 <body>
 
-<h1 class="center">This heading will not be affected</h1>
-<p class="center">This paragraph will be red and center-aligned.</p>
-<p class="center large">This paragraph will be red,
-center-aligned, and in a large font-size.</p>
+<h2>Button Sizes</h2>
+<p>Change the font size of a button with
+    the font-size property:</p>
+
+<button class="button button1">10px</button>
+<button class="button button2">12px</button>
+<button class="button button3">16px</button>
+<button class="button button4">20px</button>
+<button class="button button5">24px</button>
 
 </body>
 </html>
