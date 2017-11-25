@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<p>In HTML, all global variables will become window variables.</p>
+
+<p id="demo"></p>
+
+<script>
+    var carName = "Volvo";
+    document.getElementById("demo").innerHTML =
+        "I can display " + window.carName;
+</script>
+
+</body>
+</html>
