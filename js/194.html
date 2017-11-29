@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<p>Never create booleans as objects.</p>
+<p>Booleans and objects cannot be safely compared.</p>
+
+<p id="demo"></p>
+
+<script>
+    var x = false;
+    var y = new Boolean(false);
+    document.getElementById("demo").innerHTML =
+    typeof x + "<br>" + typeof y;
+</script>
+
+</body>
+</html>
