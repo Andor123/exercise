@@ -1,0 +1,17 @@
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "description": "This is my package",
+  "main": "main2.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "node main2.js"
+  },
+  "keywords": [
+    "My",
+    "package"
+  ],
+  "author": "Salamon Andor",
+  "license": "MIT"
+}
