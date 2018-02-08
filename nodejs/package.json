@@ -1,6 +1,6 @@
 {
-  "name": "my-package",
-  "version": "1.0.0",
+  "name": "new-nodejs-package",
+  "version": "0.0.1",
   "description": "This is my package",
   "main": "main2.js",
   "dependencies": {},
@@ -13,5 +13,13 @@
     "package"
   ],
   "author": "Salamon Andor",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andor123/exercise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Andor123/exercise/issues"
+  },
+  "homepage": "https://github.com/Andor123/exercise#readme"
 }
