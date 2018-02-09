@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Instance</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+<div id="computed_props">
+    <input type="text" v-model="fullname">
+    <h1>{{ firstname }}</h1>
+    <h1>{{ lastname }}</h1>
+</div>
+<script type="text/javascript">
+    var vm = new Vue ({
+        el: '#computed_props',
+        data: {
+            firstname: 'Terry',
+            lastname: 'Ben'
+        },
+        computed: {
+            fullname: {
+                get: function () {
+                    return this.firstname + " " + this.lastname;
+                },
+                set: function (name) {
+                    var fname = name.split(" ");
+                    this.firstname = fname[0];
+                    this.lastname = fname[1];
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

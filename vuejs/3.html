@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Introduction</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var _obj = { fname: 'Raj', lname: 'Singh' };
+
+    var vm = new Vue ({
+        data: _obj
+    });
+    console.log(vm.fname);
+    console.log(vm.$data);
+    console.log(vm.$data.fname);
+
+    var Component = Vue.extend ({
+        data: function () {
+            return _obj;
+        }
+    });
+    var myComponentInstance = new Component;
+    console.log(myComponentInstance.lname);
+    console.log(myComponentInstance.$data);
+</script>
+</body>
+</html>

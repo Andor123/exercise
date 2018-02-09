@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Instance</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+<div id="computed_props">
+    Kilometers: <input type="text" v-model="kilometers">
+    Meters: <input type="text" v-model="meters">
+
+</div>
+<script type="text/javascript">
+    var vm = new Vue ({
+        el: '#computed_props',
+        data: {
+            kilometers: 0,
+            meters: 0
+        },
+        watch: {
+            kilometers: function (val) {
+                this.kilometers = val;
+                this.meters = val * 1000;
+            },
+            meters: function (val) {
+                this.kilometers = val / 1000;
+                this.meters = val;
+            }
+        }
+    });
+</script>
+</body>
+</html>
