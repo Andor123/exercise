@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Instance</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+<div id="databinding">
+    <h3>TEXTBOX</h3>
+    <input v-model="name" placeholder="Enter name">
+    <h3>Name entered is: {{ name }}</h3>
+    <hr>
+    <h3>Textarea</h3>
+    <textarea v-model="textmessage" placeholder="Add details"></textarea>
+    <h1><p>{{ textmessage }}</p></h1>
+    <hr>
+    <h3>Checkbox</h3>
+    <input type="checkbox" id="checkbox" v-model="checked"> {{ checked }}
+</div>
+<script type="text/javascript">
+    var vm = new Vue ({
+        el: '#databinding',
+        data: {
+            name: '',
+            textmessage: '',
+            checked: false
+        }
+    });
+</script>
+</body>
+</html>
