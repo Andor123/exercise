@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Instance</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+<div id="databinding">
+    <button v-on:click="displaynumbers">Click ME</button>
+    <h2>Add Number 100 + 200 = {{ total }}</h2>
+</div>
+<script type="text/javascript">
+    var vm = new Vue ({
+        el: '#databinding',
+        data: {
+            num1: 100,
+            num2: 200,
+            total: ''
+        },
+        methods: {
+            displaynumbers: function (event) {
+                console.log(event);
+                return this.total = this.num1 + this.num2;
+            }
+        }
+    });
+</script>
+</body>
+</html>
