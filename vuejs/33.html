@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Instance</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+<style>
+    .shiftx-enter-active {
+        animation: shift-in 2s;
+    }
+    .shiftx-leave-active {
+        animation: shift-in 2s reverse;
+    }
+    @keyframes shift-in {
+        0%   {transform:rotateX(0deg);}
+        25%  {transform:rotateX(90deg);}
+        50%  {transform:rotateX(120deg);}
+        75%  {transform:rotateX(180deg);}
+        100% {transform:rotateX(360deg);}
+    }
+</style>
+<div id="databinding">
+    <button v-on:click="show=!show">Click Me</button>
+    <transition name="shiftx">
+        <p v-show="show">
+            <img src="img.jpg" style="width:100px;height:100px;">
+        </p>
+    </transition>
+</div>
+<script type="text/javascript">
+    var vm = new Vue ({
+        el: '#databinding',
+        data: {
+            show: true
+        }
+    });
+</script>
+</body>
+</html>
