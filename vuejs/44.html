@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Instance</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+<div id="component_test">
+    <testcomponent>Hello Jai</testcomponent>
+    <testcomponent>Hello Roy</testcomponent>
+    <testcomponent>Hello Ria</testcomponent>
+    <testcomponent>Hello Ben</testcomponent>
+</div>
+<script type="text/javascript">
+    Vue.component ('testcomponent', {
+        template: '<h1><slot></slot></h1>'
+    });
+    var vm = new Vue ({
+        el: '#component_test'
+    });
+</script>
+</body>
+</html>
