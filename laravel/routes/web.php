@@ -63,3 +63,43 @@ Route::get('/header', function () {
 Route::get('json', function () {
     return response()->json(['name' => 'Virat Gandhi', 'state' => 'Gurajat']);
 });
+
+Route::get('/test', function () {
+    return view('test');
+});
+
+Route::get('/test2', function () {
+    return view('test2');
+});
+
+Route::get('blade', function () {
+    return view('page', array('name' => 'Virat Gandhi'));
+});
+
+Route::get('/test3', ['as' => 'testing', function () {
+    return view('test3');
+}]);
+Route::get('redirect', function () {
+    return redirect()->route('testing');
+});
+
+Route::get('rr', 'RedirectController@index');
+Route::get('/redirectcontroller', function () {
+    return redirect()->action('RedirectController@index');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('insert', 'StudInsertController@insertform');
+Route::post('create', 'StudInsertController@insert');
+
+Route::get('view-records', 'StudViewController@index');
+
+Route::get('edit-records', 'StudUpdateController@index');
+Route::get('edit/{id}', 'StudUpdateController@show');
+Route::post('edit/{id}', 'StudUpdateController@edit');
+
+Route::get('delete-records', 'StudDeleteController@index');
+Route::get('delete/{id}', 'StudDeleteController@destroy');

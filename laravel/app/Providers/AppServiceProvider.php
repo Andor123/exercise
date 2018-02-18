@@ -2,6 +2,7 @@
 
 namespace laravel\Providers;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->share('name', 'Virat Gandhi');
+        Schema::defaultStringLength(191);
     }
 
     /**
