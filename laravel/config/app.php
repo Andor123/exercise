@@ -146,6 +146,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -159,6 +160,7 @@ return [
         // laravel\Providers\BroadcastServiceProvider::class,
         laravel\Providers\EventServiceProvider::class,
         laravel\Providers\RouteServiceProvider::class,
+        laravel\Providers\TestFacadesServiceProvider::class,
 
     ],
 
@@ -208,6 +210,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'TestFacades' => laravel\Test\Facades\TestFacades::class,
 
     ],
 

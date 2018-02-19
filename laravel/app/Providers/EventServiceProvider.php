@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'laravel\Events\Event' => [
             'laravel\Listeners\EventListener',
         ],
+        'laravel\Events\StudentAdded' => [
+            'laravel\Listeners\HandlerNewStudentAdded'
+        ]
     ];
 
     /**
