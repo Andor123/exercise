@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+srand(microtime(true) * 100000);
+$num = rand(1,4);
+
+switch ($num) {
+    case 1:
+        $image_file = "images/logo.png";
+        break;
+    case 2:
+        $image_file = "images/php.jpg";
+        break;
+    case 3:
+        $image_file = "images/logo.png";
+        break;
+    case 4:
+        $image_file = "images/php.jpg";
+        break;
+}
+echo "Random image: <img src='$image_file'>";
+?>
+</body>
+</html>
