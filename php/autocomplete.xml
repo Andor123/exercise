@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pages>
+    <link>
+        <title>Android</title>
+        <url>http://www.tutorialspoint.com/android/index.htm</url>
+    </link>
+
+    <link>
+        <title>Java</title>
+        <url>http://www.tutorialspoint.com/java/index.htm</url>
+    </link>
+
+    <link>
+        <title>CSS</title>
+        <url>http://www.tutorialspoint.com/css/index.htm</url>
+    </link>
+
+    <link>
+        <title>AngularJS</title>
+        <url>http://www.tutorialspoint.com/angularjs/index.htm</url>
+    </link>
+
+    <link>
+        <title>Hadoop</title>
+        <url>http://www.tutorialspoint.com/hadoop/index.htm</url>
+    </link>
+
+    <link>
+        <title>Swift</title>
+        <url>http://www.tutorialspoint.com/swift/index.htm</url>
+    </link>
+
+    <link>
+        <title>Ruby</title>
+        <url>http://www.tutorialspoint.com/ruby/index.htm</url>
+    </link>
+
+    <link>
+        <title>NodeJS</title>
+        <url>http://www.tutorialspoint.com/nodejs/index.htm</url>
+    </link>
+</pages>
