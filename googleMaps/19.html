@@ -5,16 +5,22 @@
     <script>
         function loadMap() {
             var mapOptions = {
-                center: new google.maps.LatLng(19.373341, 78.662109),
+                center: new google.maps.LatLng(17.433053, 78.412172),
                 zoom: 5
             };
             var map = new google.maps.Map(document.getElementById("sample"), mapOptions);
             var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(17.088291, 78.442383),
-                map: map,
-                animation: google.maps.Animation.Drop
+                position: map.getCenter(),
+                icon: {
+                    path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+                    scale: 5,
+                    strokeWeight: 2,
+                    strokeColor: "#B40404"
+                },
+                animation: google.maps.Animation.DROP,
+                draggable: true,
+                map: map
             });
-            marker.setMap(null);
         }
     </script>
 </head>

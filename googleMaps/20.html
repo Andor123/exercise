@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoUoMsaWAHwVE7tO5Q8r6lv5rEt9QA8R0"></script>
+    <script>
+        function loadMap() {
+            var myCenter = new google.maps.LatLng(17.433053, 78.412172);
+            var mapProp = {
+                center: myCenter,
+                zoom: 5,
+                mapTypeId: "roadmap"
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var marker = new google.maps.Marker({
+                position: myCenter,
+                title: 'Click to zoom'
+            });
+            marker.setMap(map);
+            google.maps.event.addListener(marker, 'click', function () {
+                map.setZoom(9);
+                map.setCenter(marker.getPosition());
+            });
+        }
+    </script>
+</head>
+<body onload="loadMap()">
+<div id="googleMap" style="width:580px; height:400px;"></div>
+</body>
+</html>

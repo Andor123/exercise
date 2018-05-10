@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoUoMsaWAHwVE7tO5Q8r6lv5rEt9QA8R0"></script>
+    <script>
+        function loadMap() {
+            var mapProp = {
+                center: new google.maps.LatLng(17.433053, 78.412172),
+                zoom: 6,
+                mapTypeId: 'roadmap'
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var myrectangle = new google.maps.Rectangle({
+                strokeColor: "#0000FF",
+                strokeOpacity: 0.6,
+                strokeWeight: 2,
+                fillColor: "#0000FF",
+                fillOpacity: 0.4,
+                map: map,
+                bounds: new google.maps.LatLngBounds(
+                    new google.maps.LatLng(17.342761, 78.552432),
+                    new google.maps.LatLng(16.396553, 80.727725)
+                )
+            });
+        }
+    </script>
+</head>
+<body onload="loadMap()">
+<div id="googleMap" style="width:580px; height:400px;"></div>
+</body>
+</html>
